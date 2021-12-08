@@ -1,0 +1,122 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-023 distancia
+024-027 tiempo
+028-029 duty
+02A     Timer2
+02B     Postcaler
+02C     @TRIS_C
+02D-02E @ITOF.P1
+02D-030 @SFTOI.P2
+02D-030 @PRINTF_L32D_9600_62_63FPFPF.P3
+02D     @PSTRINGCN7_9600_62_63.P4
+02D     main.@SCRATCH1
+02E     @delay_ms1.P1
+02E     main.@SCRATCH2
+02E     @PSTRINGCN7_9600_62_63.@SCRATCH1
+02F     main.@SCRATCH3
+02F     @PSTRINGCN7_9600_62_63.@SCRATCH2
+030     main.@SCRATCH4
+030     @PSTRINGCN7_9600_62_63.@SCRATCH3
+031     @PRINTF_L32D_9600_62_63FPFPF.P1
+031-034 @DIVFF.P2
+031     @PSTRINGCN7_9600_62_63.@SCRATCH4
+032     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH1
+033     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH2
+034     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH3
+035-038 @DIVFF.P1
+035     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH4
+036     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH5
+037     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH6
+038     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH7
+039     @DIVFF.@SCRATCH1
+039     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH8
+03A-03D @MULFF.P1
+03A-03D @DIV3232.P2
+03A-03D @FTOSD.P3
+03A     @DIVFF.@SCRATCH2
+03B     @DIVFF.@SCRATCH3
+03C     @DIVFF.@SCRATCH4
+03D     @DIVFF.@SCRATCH5
+03E-041 @DIV3232.P1
+03E-041 @MULFF.P2
+03E     @DIVFF.@SCRATCH6
+03E     @FTOSD.@SCRATCH1
+042     @MULFF.@SCRATCH1
+042     @DIV3232.@SCRATCH1
+043     @MULFF.@SCRATCH2
+043     @DIV3232.@SCRATCH2
+044     @MULFF.@SCRATCH3
+044     @DIV3232.@SCRATCH3
+045     @MULFF.@SCRATCH4
+045     @DIV3232.@SCRATCH4
+046     @MULFF.@SCRATCH5
+046     @DIV3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const657.call
+00000C  @const668.call
+000012  @ITOF
+000031  @DIVFF
+0000FB  @MULFF
+000170  @PSTRINGCN7_9600_62_63
+0001C9  @DIV3232
+000218  @PRINTF_L32D_9600_62_63FPFPF
+00023F  @FTOSD
+0002FC  @delay_ms1
+000313  @SFTOI
+000334  @cinit1
+000334  main
+00034A  @cinit2
+
+Project Directory:
+    C:\Users\Muerto\OneDrive - Instituto Politecnico Nacional\Documentos\INSTRUMENTACION\Unidad2\PracticasPIC16f877a\Sensor Ultrasonico PWM\
+
+Project Files:
+    sensor_ultrasonico_pwm.c                                [25-nov.-21 23:27  CRC=7CEFD2AB]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877a.h [15-ene.-18 14:53  CRC=63418C39]
+
+Source signature=4372EB1D
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=F057
+
+Units:
+    sensor_ultrasonico_pwm (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   sensor_ultrasonico_pwm.xsym
+    Errors:      sensor_ultrasonico_pwm.err
+    Ext Symbols: sensor_ultrasonico_pwm.esym
+    INHX8:       sensor_ultrasonico_pwm.hex
+    Symbols:     sensor_ultrasonico_pwm.sym
+    List:        sensor_ultrasonico_pwm.lst
+    Debug/COFF:  sensor_ultrasonico_pwm.cof
+    Project:     sensor_ultrasonico_pwm.ccspjt
+    Call Tree:   sensor_ultrasonico_pwm.tre
+    Statistics:  sensor_ultrasonico_pwm.STA

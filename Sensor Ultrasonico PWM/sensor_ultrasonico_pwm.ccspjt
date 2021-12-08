@@ -1,0 +1,40 @@
+[PROJECT]
+Target=sensor_ultrasonico_pwm.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.076
+Compiler=PCM
+[Target Data]
+FileList=sensor_ultrasonico_pwm.c
+[sensor_ultrasonico_pwm.c]
+Type=4
+[mru-list]
+1=sensor_ultrasonico_pwm.c
+
+[defines]
+buildcount=2
+
+[ProjectLog]
+Days=1
+D1=25-11-2021
+D1_L=6
+D1_L1=[79114]Stopped Editing.
+TotalEdit=7
+TotalDebug=0
+D1_E=7
+D1_D=0
+D1_L2=[80140]Project Closed.
+D1_L3=[84422]Project Opened.
+D1_L4=[84440]Started Editing.
+D1_L5=[84454]Stopped Editing.
+D1_L6=[84454]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=sensor_ultrasonico_pwm.c
+t1=37
+Count=1
+[Units]
+Count=1
+1=sensor_ultrasonico_pwm (main)
