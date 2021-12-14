@@ -1,18 +1,14 @@
 ÀÄsensor_ultrasonico_pwm
-   ÀÄmain  0/300  Ram=4
+   ÀÄmain  0/263  Ram=4
       ÃÄ@cinit1  (Inline)  Ram=0
       ÃÄ@ITOF  0/31  Ram=2
       ÃÄ@DIVFF  0/202  Ram=14
       ÃÄ@MULFF  0/117  Ram=13
-      ÃÄ@PSTRINGCN7_9600_62_63  0/89  Ram=5
-      ÃÄ@PRINTF_L32D_9600_62_63FPFPF  0/228  Ram=13
+      ÃÄ@PRINTF_L32D_9600_62_63FPFPF  0/230  Ram=13
       ³  ÃÄ@MULFF  0/117  Ram=13
       ³  ÃÄ@FTOSD  (Inline)  Ram=5
       ³  ÃÄ@DIV3232  0/79  Ram=13
       ³  ÀÄ@DIV3232  0/79  Ram=13
-      ÃÄ@PSTRINGCN7_9600_62_63  0/89  Ram=5
-      ÃÄ@PRINTF_L32D_9600_62_63FPFPF  0/228  Ram=13
-      ³  ÀÄ*
       ÃÄ@delay_ms1  0/23  Ram=1
       ÃÄ@MULFF  0/117  Ram=13
       ÃÄ@DIVFF  0/202  Ram=14

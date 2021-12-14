@@ -44,10 +44,8 @@ void main(){
       
       distancia=(tiempo/2)*(0.0343);//conversion de la constante del sonido a cm/seg
       
-      //se imprime la distancia y tiempo 
-      
+      //se imprime la distancia y tiempo   
       printf("%f\n",distancia);
-      //printf("\rDistancia=%f\n",distancia);
       //printf("\rTiempo=%f\n",tiempo);
          
       delay_ms(500);
