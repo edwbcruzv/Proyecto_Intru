@@ -156,7 +156,7 @@
 selection-color: rgb(255, 205, 205);</string>
      </property>
      <property name="value">
-      <number>24</number>
+      <number>0</number>
      </property>
      <property name="textVisible">
       <bool>false</bool>
@@ -196,7 +196,7 @@ selection-color: rgb(255, 205, 205);</string>
       <bool>false</bool>
      </property>
      <property name="value">
-      <number>24</number>
+      <number>0</number>
      </property>
      <property name="textVisible">
       <bool>false</bool>
@@ -212,7 +212,7 @@ selection-color: rgb(255, 205, 205);</string>
       </rect>
      </property>
      <property name="value">
-      <number>24</number>
+      <number>0</number>
      </property>
      <property name="textVisible">
       <bool>false</bool>

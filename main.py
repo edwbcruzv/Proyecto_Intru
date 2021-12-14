@@ -17,13 +17,44 @@ class Ventana(QtWidgets.QWidget):
         super(Ventana,self).__init__(parent)
         self.ui=Ui_Form()
         self.ui.setupUi(self)
+        self.ser = serial.Serial('COM2',9600, timeout=1)
+        time.sleep(1)
 
-        self.litros=100
+        self.litros=1
         self.ui.lcdNumber_Litros.display(str(self.litros))
+
+        #self.ui.pushButton_IniciarLlenado.clicked.connect(self.corre)
+        
+        hilo=threading.Thread(target=self.puerto)
+        hilo.start()
+    
+    def puerto(self):
+
+        while True:  
+            
+            try:
+                distancia=float(self.ser.readline().decode('utf-8'))
+                print(">",distancia)
+                #mas distancia menos litros
+                #menos distancia mas litros
+                #la distancia maxima de 2 metros= 200 cm
+                self.litros=int(1100-distancia*5.5)
+                print(self.litros)
+                self.litros=self.puerto.litros()
+            except:
+                #al momento de recibir un dato puede haber un error y aqui se pasa por alto
+                print("-----")
+            try:
+                self.ui.lcdNumber_Litros.display(str(self.litros))
+                self.llenadoTinaco(self.litros) #se va a la interfaz
+            except:
+                print("paralelo")
+    
 
     def llenadoTinaco(self,litros):
         if litros > 1100:
             #tinaco lleno
+            print("lleno")
             return
         
         if litros<self.litros:#se esta vaciendo el tinaco
@@ -40,47 +71,20 @@ class Ventana(QtWidgets.QWidget):
         self.litros=litros# se actualizan los litros
         self.ui.lcdNumber_Litros.display(str(self.litros))
         # 1100 = 100%
-        # litros= x
+        # litros= x %
 
         self.ui.progressBar_Tinaco.setValue(int((litros*100)/1100))
 
-class Puerto:
 
-    def __init__(self) -> None:
-        self.ser = serial.Serial('COM2',9600, timeout=1)
-        time.sleep(2)
-
-    def litros(self):
-        distancia=float(self.ser.readline().decode('utf-8'))
-        print(">",distancia)
-        #mas distancia menos litros
-        #menos distancia mas litros
-        #la distancia maxima de 2 metros= 200 cm
-        litros=int(1100-distancia*5.5)
-        print(litros)
-
-        return litros
 
 ##*****INICIO DE TODO EL PROGRAMA
 if __name__=='__main__':
-    puerto=Puerto()
-    time.sleep(2)
+    
     app=QtWidgets.QApplication(sys.argv)
     myapp=Ventana()
     myapp.show()
-    litros=1
-
-    while True:  
-        
-        try:
-            print(litros)
-            litros=puerto.litros()
-        except:
-            #al momento de recibir un dato puede haber un error y aqui se pasa por alto
-            print("-----")
-        
-        myapp.llenadoTinaco(puerto.litros()) #se va a la interfaz
-
     sys.exit(app.exec_())
+    
+
 
 
