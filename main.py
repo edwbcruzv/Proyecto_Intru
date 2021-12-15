@@ -33,7 +33,9 @@ class Ventana(QtWidgets.QWidget):
         while True:  
             
             try:
-                distancia=float(self.ser.readline().decode('utf-8'))
+                cad_aux=self.ser.readline().decode('utf-8')
+                list_aux=cad_aux.split(",")
+                distancia=float(list_aux[0])
                 print(">",distancia)
                 #mas distancia menos litros
                 #menos distancia mas litros
@@ -44,11 +46,12 @@ class Ventana(QtWidgets.QWidget):
             except:
                 #al momento de recibir un dato puede haber un error y aqui se pasa por alto
                 print("-----")
-            try:
-                self.ui.lcdNumber_Litros.display(str(self.litros))
-                self.llenadoTinaco(self.litros) #se va a la interfaz
-            except:
-                print("paralelo")
+            
+            self.ui.lcdNumber_Litros.display(str(self.litros))
+            self.ui.lcdNumber_Humedad.display(str(self.litros))
+            self.ui.lcdNumber_Temperatura.display(list_aux[1])
+            self.llenadoTinaco(self.litros) #se va a la interfaz
+            
     
 
     def llenadoTinaco(self,litros):

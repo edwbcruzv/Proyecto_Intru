@@ -52,7 +52,7 @@
     <string/>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <property name="usesScrollButtons">
     <bool>true</bool>
@@ -240,10 +240,10 @@ selection-color: rgb(255, 205, 205);</string>
     <widget class="QLCDNumber" name="lcdNumber_Litros">
      <property name="geometry">
       <rect>
-       <x>680</x>
-       <y>110</y>
-       <width>121</width>
-       <height>31</height>
+       <x>640</x>
+       <y>90</y>
+       <width>191</width>
+       <height>101</height>
       </rect>
      </property>
     </widget>
@@ -275,6 +275,35 @@ selection-color: rgb(255, 205, 205);</string>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>10</y>
+       <width>731</width>
+       <height>541</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>med_humedad.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcdNumber_Humedad">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>280</y>
+       <width>171</width>
+       <height>71</height>
+      </rect>
      </property>
     </widget>
    </widget>
@@ -323,26 +352,49 @@ selection-color: rgb(255, 205, 205);</string>
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QProgressBar" name="progressBar">
+    <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>630</x>
-       <y>90</y>
-       <width>21</width>
-       <height>361</height>
+       <x>340</x>
+       <y>20</y>
+       <width>471</width>
+       <height>541</height>
       </rect>
      </property>
-     <property name="value">
-      <number>24</number>
+     <property name="text">
+      <string/>
      </property>
-     <property name="textVisible">
-      <bool>false</bool>
+     <property name="pixmap">
+      <pixmap>med_radiacion.jpg</pixmap>
      </property>
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
-     <property name="invertedAppearance">
-      <bool>false</bool>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>150</y>
+       <width>101</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>med_radiacion.jpg</pixmap>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcdNumber_Temperatura">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>150</y>
+       <width>121</width>
+       <height>71</height>
+      </rect>
      </property>
     </widget>
    </widget>
