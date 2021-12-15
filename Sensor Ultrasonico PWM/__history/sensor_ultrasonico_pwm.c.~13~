@@ -53,7 +53,7 @@ void main(){
       
       //se imprime la distancia y tiempo 
       
-      printf("\r%f,%f\n",distancia,temperatura);
+      printf("%f,%f",distancia,temperatura);
       //printf("\rDistancia=%f\n",distancia);
       //printf("\rTiempo=%f\n",tiempo);
          

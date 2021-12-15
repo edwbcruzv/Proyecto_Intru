@@ -21,9 +21,8 @@ class Ventana(QtWidgets.QWidget):
         time.sleep(1)
 
         self.litros=1
+        self.temperatura="000"
         self.ui.lcdNumber_Litros.display(str(self.litros))
-
-        #self.ui.pushButton_IniciarLlenado.clicked.connect(self.corre)
         
         hilo=threading.Thread(target=self.puerto)
         hilo.start()
@@ -31,26 +30,31 @@ class Ventana(QtWidgets.QWidget):
     def puerto(self):
 
         while True:  
-            
+            time.sleep(1)
             try:
                 cad_aux=self.ser.readline().decode('utf-8')
                 list_aux=cad_aux.split(",")
                 distancia=float(list_aux[0])
                 print(">",distancia)
+                print(">",list_aux[1])
+                #print(">",list_aux[2])
                 #mas distancia menos litros
                 #menos distancia mas litros
                 #la distancia maxima de 2 metros= 200 cm
                 self.litros=int(1100-distancia*5.5)
                 print(self.litros)
-                self.litros=self.puerto.litros()
+                self.temperatura=list_aux[1]
+                print(self.temperatura)
             except:
                 #al momento de recibir un dato puede haber un error y aqui se pasa por alto
                 print("-----")
-            
-            self.ui.lcdNumber_Litros.display(str(self.litros))
-            self.ui.lcdNumber_Humedad.display(str(self.litros))
-            self.ui.lcdNumber_Temperatura.display(list_aux[1])
-            self.llenadoTinaco(self.litros) #se va a la interfaz
+            try:
+                self.ui.lcdNumber_Litros.display(str(self.litros))
+                self.ui.lcdNumber_Radiacion.display("000")
+                self.ui.lcdNumber_Temperatura.display(self.temperatura)
+                self.llenadoTinaco(self.litros) #se va a la interfaz
+            except:
+                print(">>>")
             
     
 

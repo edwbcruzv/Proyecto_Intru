@@ -11,14 +11,14 @@ Type=4
 1=sensor_ultrasonico_pwm.c
 
 [defines]
-buildcount=7
+buildcount=9
 
 [ProjectLog]
-Days=2
+Days=3
 D1=25-11-2021
 D1_L=6
 D1_L1=[79114]Stopped Editing.
-TotalEdit=11
+TotalEdit=20
 TotalDebug=0
 D1_E=7
 D1_D=0
@@ -45,13 +45,31 @@ D2_L11=[59401]Stopped Editing.
 D2_L12=[60991]Started Editing.
 D2_L13=[61315]Stopped Editing.
 D2_L14=[64937]Project Closed.
+D3=14-12-2021
+D3_L=14
+D3_L1=[60250]Project Opened.
+D3_L2=[61589]Project Closed.
+D3_L3=[63609]Project Opened.
+D3_L4=[63677]Started Editing.
+D3_L5=[64011]Stopped Editing.
+D3_L6=[64575]Started Editing.
+D3_L7=[65168]Stopped Editing.
+D3_L8=[65210]Started Editing.
+D3_L9=[65319]Stopped Editing.
+D3_E=9
+D3_D=0
+D3_L10=[65319]Project Closed.
+D3_L11=[80795]Project Opened.
+D3_L12=[80813]Started Editing.
+D3_L13=[80824]Stopped Editing.
+D3_L14=[80824]Project Closed.
 
 [fileformats]
 forcecoff=0
 
 [Opened Files]
 1=sensor_ultrasonico_pwm.c
-t1=41
+t1=37
 Count=1
 [Units]
 Count=1

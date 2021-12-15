@@ -23,7 +23,7 @@ void main(){
    
    setup_timer_2(t2_div_by_4,Timer2,Postcaler);
    setup_ccp1(ccp_pwm);
-   setup_adc_ports(AN0);
+   setup_adc_ports(all_analog);
    setup_adc(adc_clock_internal);
    //PWM
    
@@ -47,13 +47,11 @@ void main(){
       
       distancia=(tiempo/2)*(0.0343);//conversion de la constante del sonido a cm/seg
       
-      dato = read_adc();
-      temperatura=(dato*100.00)/1023.00;
-      
+      dato = read_adc_ports(AN0);
       
       //se imprime la distancia y tiempo 
       
-      printf("\r%f,%f\n",distancia,temperatura);
+      printf("%f,",distancia);
       //printf("\rDistancia=%f\n",distancia);
       //printf("\rTiempo=%f\n",tiempo);
          

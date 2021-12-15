@@ -1,10 +1,4 @@
-Compiling C:\Users\Muerto\Documents\VS\Proyecto_Intru\Sensor Ultrasonico PWM\sensor_ultrasonico_pwm on 13-dic.-21 at 16:56
-*** Error 18 "sensor_ultrasonico_pwm.c" Line 2(10,20): File can not be opened
-    Not in "C:\Program Files (x86)\PICC\Devices\unistd.h"
-    Not in "C:\Program Files (x86)\PICC\Drivers\unistd.h"
-    Not in source "unistd.h"
-    Not in local "unistd.h"
-    Not in project "C:\Users\Muerto\Documents\VS\Proyecto_Intru\Sensor Ultrasonico PWM\unistd.h"
-*** Error 58 "sensor_ultrasonico_pwm.c" Line 49(13,14): Expecting a close paren
-      2 Errors,  0 Warnings.
-Build Failed.
+Compiling C:\Users\Muerto\Documents\VS\Proyecto_Intru\Sensor Ultrasonico PWM\sensor_ultrasonico_pwm on 14-dic.-21 at 22:26
+      Memory usage:   ROM=13%      RAM=8% - 14%
+      0 Errors,  0 Warnings.
+Build Successful.

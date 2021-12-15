@@ -1,5 +1,5 @@
 #include <16f877a.h>
-#device adc=10
+
 #fuses XT, NOWDT, NOPROTECT, NOLVP, PUT, BROWNOUT
 #use delay(clock=4000000)
 #use RS232(baud=9600,parity=N,xmit=pin_c6,rcv=pin_c7,bits=8)
@@ -12,9 +12,6 @@ int16 duty=0;
 int Timer2, Postcaler;
 
 void main(){
-
-   int16 dato;
-   float temperatura;
    setup_timer_1(T1_internal|T1_div_by_1);
    
    //PWM
@@ -23,7 +20,7 @@ void main(){
    
    setup_timer_2(t2_div_by_4,Timer2,Postcaler);
    setup_ccp1(ccp_pwm);
-   setup_adc_ports(AN0);
+   setup_adc_ports(all_analog);
    setup_adc(adc_clock_internal);
    //PWM
    
@@ -47,13 +44,9 @@ void main(){
       
       distancia=(tiempo/2)*(0.0343);//conversion de la constante del sonido a cm/seg
       
-      dato = read_adc();
-      temperatura=(dato*100.00)/1023.00;
-      
-      
       //se imprime la distancia y tiempo 
       
-      printf("\r%f,%f\n",distancia,temperatura);
+      printf("%f\n",distancia);
       //printf("\rDistancia=%f\n",distancia);
       //printf("\rTiempo=%f\n",tiempo);
          
